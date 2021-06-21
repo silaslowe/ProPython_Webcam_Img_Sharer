@@ -1,16 +1,35 @@
-# This is a sample Python script.
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.lang import Builder
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+Builder.load_file('frontend.kv')
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+from filesharer import FileSharer
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class CameraScreen(Screen):
+    def start(self):
+        pass
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def stop(self):
+        pass
+
+    def capture(self):
+        pass
+
+
+class ImageScreen(Screen):
+    pass
+
+
+class RootWidget(ScreenManager):
+    pass
+
+
+class MainApp(App):
+
+    def build(self):
+        return RootWidget()
+
+
+MainApp().run()
