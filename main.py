@@ -12,7 +12,7 @@ class CameraScreen(Screen):
         self.ids.camera.play = True
 
     def stop(self):
-        pass
+        self.ids.camera.play = False
 
     def capture(self):
         pass
