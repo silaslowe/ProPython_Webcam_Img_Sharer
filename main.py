@@ -4,7 +4,7 @@ from kivy.lang import Builder
 
 Builder.load_file('frontend.kv')
 
-from filesharer import FileSharer
+# from filesharer import FileSharer
 
 
 class CameraScreen(Screen):
